@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>G.A Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fefefe;
+    }
+
+    header {
+      background-color: orange;
+      color: black;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      display: block;
+      margin: 20px auto 0;
+      width: 100px;
+    }
+
+    nav {
+      background-color: #f1f1f1;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav button {
+      margin: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #ddd;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: #bbb;
+    }
+
+    nav button.active {
+      background-color: orange;
+      color: white;
+    }
+
+    section {
+      display: none;
+      padding: 20px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="G.AINC.png" alt="G.A Inc Logo" class="logo" />
+
+  <header>
+    <h1>G.A Informative Oriented Website</h1>
+    <p>Explore the mission, services, and values of G.A Inc.</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('home', this)" class="active">Home</button>
+    <button onclick="showSection('about', this)">About</button>
+    <button onclick="showSection('services', this)">Services</button>
+    <button onclick="showSection('market', this)">Market</button>
+    <button onclick="showSection('safety', this)">Safety</button>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Welcome to G.A Inc</h2>
+    <p>We deliver essential services and valuable information to empower both local and online communities.</p>
+  </section>
+
+  <section id="about">
+    <h2>About the Owner</h2>
+    <p>I'm Ron Gabriel P. Juanga, the founder of G.A Inc, dedicated to helping others through tech-driven solutions and accessible information.</p>
+    <h3>PECs Reflection</h3>
+    <p>Through perseverance, honesty, and innovation, I strive to build trust and provide value to every user and client.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>We offer a wide range of digital services designed to educate and assist users efficiently.</p>
+    <ul>
+      <li>Tutorials and Learning Guides</li>
+      <li>Website Design and Development</li>
+      <li>Information Sharing and Digital Support</li>
+    </ul>
+    <h3>Tools We Use</h3>
+    <ul>
+      <li>Google Chrome for testing and research</li>
+      <li>SPCK Editor for coding and development</li>
+      <li>Smartphones for mobile responsiveness and communication</li>
+    </ul>
+  </section>
+
+  <section id="market">
+    <h2>Market</h2>
+    <p><strong>Location:</strong> Brgy. Sampalok Makus, Philippines</p>
+    <p><strong>Target Users:</strong> Local residents, students, and online learners looking for tech help and information access.</p>
+  </section>
+
+  <section id="safety">
+    <h2>Safety Reminders</h2>
+    <ul>
+      <li>Always protect your personal information when browsing online.</li>
+      <li>Verify sources before applying shared advice or data.</li>
+      <li>We prioritize user safety, data privacy, and responsible digital practices.💯</li>
+    </ul>
+  </section>
+
+  <script>
+    function showSection(id, btn) {
+      const sections = document.querySelectorAll('section');
+      const buttons = document.querySelectorAll('nav button');
+
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+
+      buttons.forEach(button => button.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
